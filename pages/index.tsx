@@ -62,7 +62,7 @@ const HomePage: NextPage = () => {
       <div className="px-6 flex flex-col space-y-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {homeCardInfo?.map((item) => (
-            <Card sx={{ borderRadius: '3', width: 245, marginTop: 5 }}>
+            <Card key={item.id} sx={{ borderRadius: '3', width: 245, marginTop: 5 }}>
               <Box
                 sx={{
                   p: 2,
