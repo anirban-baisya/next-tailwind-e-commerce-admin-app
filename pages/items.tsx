@@ -24,7 +24,7 @@ const ItemsPage: NextPage = () => {
       <div className="container h-screen">
         <div className="flex flex-col items-center gap-4">
           <h1 className="text-4xl my-8">
-            Welcome to TeamPage
+            Welcome to User Product Page
           </h1>
         </div>
 
