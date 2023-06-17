@@ -3,6 +3,7 @@ import {
   CalendarIcon,
   FolderIcon,
   HomeIcon,
+  RectangleGroupIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/outline";
 // define a NavItem prop
@@ -18,9 +19,9 @@ export const defaultNavItems: NavItem[] = [
     icon: <HomeIcon className="w-6 h-6" />,
   },
   {
-    label: "Team",
-    href: "/team",
-    icon: <UserGroupIcon className="w-6 h-6" />,
+    label: "Items",
+    href: "/items",
+    icon: <RectangleGroupIcon className="w-6 h-6" />,
   },
   {
     label: "Projects",

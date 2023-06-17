@@ -1,10 +1,10 @@
 import { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 import { Badge, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Drawer, Grid, IconButton, Paper, Stack, Typography } from "@mui/material";
-import { productsInfo } from './../dummyData/Data';
+import { productsInfo } from '../dummyData/Data';
 import { ShoppingCartIcon, TrashIcon } from "@heroicons/react/24/outline";
 
-const TeamPage: NextPage = () => {
+const ItemsPage: NextPage = () => {
   const [cartOpen, setCartOpen] = useState(false);
   const [price, setPrice] = useState(0);
   const [cartLists, setCartLists] = useState<any>([]);
@@ -160,4 +160,4 @@ const TeamPage: NextPage = () => {
   );
 };
 
-export default TeamPage;
+export default ItemsPage;
