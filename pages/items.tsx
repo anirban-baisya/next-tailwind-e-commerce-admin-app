@@ -1,8 +1,8 @@
-import { NextPage } from "next";
-import React, { useEffect, useState } from "react";
-import { Badge, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Drawer, Grid, IconButton, Paper, Stack, Typography } from "@mui/material";
-import { productsInfo } from '../dummyData/Data';
 import { ShoppingCartIcon, TrashIcon } from "@heroicons/react/24/outline";
+import { Badge, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Drawer, Grid, IconButton, Typography } from "@mui/material";
+import { NextPage } from "next";
+import { useEffect, useState } from "react";
+import { productsInfo } from '../dummyData/Data';
 
 const ItemsPage: NextPage = () => {
   const [cartOpen, setCartOpen] = useState(false);
@@ -10,12 +10,12 @@ const ItemsPage: NextPage = () => {
   const [cartLists, setCartLists] = useState<any>([]);
 
   useEffect(() => {
-    setPrice(cartLists.reduce((total:any, { salePrice }:any) => total + salePrice, 0));
+    setPrice(cartLists.reduce((total: any, { salePrice }: any) => total + salePrice, 0));
   }, [cartLists]);
 
-  const addToCart = (item:any) => {setCartLists([...cartLists, item])};
+  const addToCart = (item: any) => { setCartLists([...cartLists, item]) };
 
-  const removeFromCart = (index:any) => {setCartLists((cartList:any) => cartList.filter((_:any, i:any) => i !== index)) };
+  const removeFromCart = (index: any) => { setCartLists((cartList: any) => cartList.filter((_: any, i: any) => i !== index)) };
 
   const clearCart = () => setCartLists([]);
 
@@ -30,14 +30,10 @@ const ItemsPage: NextPage = () => {
 
         <div className=" ">
           <Drawer anchor="right" open={cartOpen} onClose={() => setCartOpen(false)}>
-            {/* <Cart
-          cartItems={cartItems}
-          addToCart={handleAddToCart}
-          removeFromCart={handleRemoveFromCart}
-        /> */}
+
             <div className="w-50 text-left">
               <h3 className="text-4xl my-5 mx-5">Cart Lists: -</h3>
-              {cartLists.map(({ image, salePrice, title }:any, index:any) => (
+              {cartLists.map(({ image, salePrice, title }: any, index: any) => (
                 <div
                   key={`${title}-${index}`}
                   // className="d-flex justify-content-between mb-3"
@@ -48,14 +44,13 @@ const ItemsPage: NextPage = () => {
                     <h3>{title}</h3>
                     <h3 className="ml-auto price">₹{salePrice}</h3>
                   </div>
-                  {/* <Delete onClick={() => removeFromCart(index)}>Delete</Delete> */}
                   <IconButton onClick={() => removeFromCart(index)}>
                     <TrashIcon className="h-6 w-6 text-gray-500" />
                   </IconButton>
 
                 </div>
               ))}
-                  
+
 
               {cartLists.length == 0 && <h2 className="text-3xl my-8 mx-5 text-red-600">No items in cart.  </h2>}
 
@@ -68,10 +63,9 @@ const ItemsPage: NextPage = () => {
                   Clear Cart
                 </Button>
 
-                <Button size="small" variant="contained" sx={{color:'blueviolet'}}>
-                {/* <button className="btn btn-primary ml-2"> */}
+                <Button size="small" variant="contained" sx={{ color: 'blueviolet' }}>
                   CheckOut
-                  </Button>
+                </Button>
               </div>
             </div>
 
@@ -83,19 +77,16 @@ const ItemsPage: NextPage = () => {
             right: '20px',
             top: '20px',
           }}>
-            <Badge badgeContent={cartLists.length > 0 ?cartLists.length  :null } color="error">
+            <Badge badgeContent={cartLists.length > 0 ? cartLists.length : null} color="error">
               <ShoppingCartIcon className="h-6 w-6 text-gray-500" />
 
             </Badge>
           </IconButton>
 
-          {/* <Paper sx={{ width: 200, maxWidth: '100%' }}> */}
 
           <Grid container spacing={3} sx={{ overflowY: "scroll", maxHeight: "635px" }}>
             {productsInfo?.map((item) => (
               <Grid item key={item.id} xs={12} sm={4}>
-                {/* <Item item={item} handleAddToCart={handleAddToCart} /> */}
-
 
                 <Card raised
                   sx={{
@@ -117,10 +108,8 @@ const ItemsPage: NextPage = () => {
                       <Typography gutterBottom fontSize={25} component="div">
                         {item.title}
                       </Typography>
-                      {/* font-semibold truncate block */}
                       <Typography variant="body2" color="text.secondary" style={{
                         display: 'block',
-                        //  display:'-webkit-flex',
                         textOverflow: "ellipsis",
                         wordWrap: 'break-word',
                         overflow: 'hidden',
@@ -151,7 +140,6 @@ const ItemsPage: NextPage = () => {
               </Grid>
             ))}
           </Grid>
-          {/* </Paper> */}
 
         </div>
 

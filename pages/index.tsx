@@ -1,9 +1,8 @@
-import { Avatar, Box, Card, Grid, CardMedia, IconButton, Typography } from "@mui/material";
-import { NextPage } from "next";
-import React from "react";
+import { BanknotesIcon, ListBulletIcon, RectangleGroupIcon, UserGroupIcon } from "@heroicons/react/24/outline";
+import { Avatar, Box, Card, Typography } from "@mui/material";
 import BarChart from "components/layout/dashboard/BarChart";
 import LineChart from "components/layout/dashboard/LineChart";
-import { BanknotesIcon, ListBulletIcon, RectangleGroupIcon, UserGroupIcon } from "@heroicons/react/24/outline";
+import { NextPage } from "next";
 
 
 const homeCardInfo = [
@@ -37,27 +36,7 @@ const homeCardInfo = [
 const HomePage: NextPage = () => {
   return (
     <>
-      {/*  <div className=" ">
-    //   <div className="container h-screen">
-    //     <div className="flex flex-col items-center gap-4">
-    //       <h1 className="text-4xl my-8">
-    //         Welcome to NextJS Collapsible Sidebar Tutorial
-    //       </h1> */}
 
-      {/* <div className="rounded-md shadow bg-white flex flex-col">
-            <div className="flex space-x-4 items-center px-4 py-3">
-              {'props.children'}
-              <div className="flex flex-col space-y-1">
-                <h3 className="font-lg text-gray-500">{'props.title'}</h3>
-                <span className="font-semibold text-2xl text-gray-600">
-                  {'props.statics'}
-                </span>
-              </div>
-            </div>
-            <div className="bg-gray-50 px-4 py-3 rounded-b-md">
-              <a href="!#" className="text-sm text-indigo-500 hover:text-indigo-700">View all</a>
-            </div>
-          </div> */}
 
       <div className="px-6 flex flex-col space-y-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -93,9 +72,7 @@ const HomePage: NextPage = () => {
                     </Typography>
                   </Box>
                 </Box>
-                {/* <IconButton aria-label="next" size="large">
-                  <Icon path={mdiPen} title="Pen" color="#222" size={1.2} />
-                </IconButton> */}
+                
               </Box>
             </Card>
 

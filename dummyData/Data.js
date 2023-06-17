@@ -113,5 +113,19 @@ export const productsInfo = [
      }
   ];
   
-//   export default data;
+
+
+  
+export const customersTableInfo = [
+    {
+        "id":1,
+        "name":"Dean Lynch",
+        "profileImg":'https://randomuser.me/api/portraits/men/30.jpg',
+        "email":'abc@gmail.com',
+        "joinedDate":'05/06/2020',
+        "role":"admin"
+     },
+     
+  ];
+  
   

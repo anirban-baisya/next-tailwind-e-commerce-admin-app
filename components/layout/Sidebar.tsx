@@ -1,8 +1,3 @@
-import React, { useRef } from "react";
-import classNames from "classnames";
-import Link from "next/link";
-import Image from "next/image";
-import { defaultNavItems, NavItem } from "./defaultNavItems";
 import {
   ArrowRightOnRectangleIcon,
   ChevronDoubleLeftIcon,
@@ -10,8 +5,13 @@ import {
   ChevronUpDownIcon,
   UserCircleIcon
 } from "@heroicons/react/24/outline";
-import { Button, ListItemIcon, ListItemText, MenuItem, MenuList, Paper, Typography } from "@mui/material";
+import { Button, ListItemIcon, ListItemText, MenuItem, MenuList, Paper } from "@mui/material";
 import Popover from '@mui/material/Popover';
+import classNames from "classnames";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { defaultNavItems, NavItem } from "./defaultNavItems";
 
 // add NavItem prop to component prop
 type Props = {
@@ -30,7 +30,7 @@ const Sidebar = ({
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = (event:any) => {
+  const handleClick = (event: any) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -151,7 +151,7 @@ const Sidebar = ({
             <MenuList>
               <MenuItem>
                 <ListItemIcon>
-                <UserCircleIcon className="h-6 w-6 text-gray-500" />
+                  <UserCircleIcon className="h-6 w-6 text-gray-500" />
 
                 </ListItemIcon>
                 <ListItemText>My Profile</ListItemText>
@@ -159,12 +159,14 @@ const Sidebar = ({
               </MenuItem>
               <MenuItem>
                 <ListItemIcon>
-                <ArrowRightOnRectangleIcon className="h-6 w-6 text-gray-500" />
+                  <ArrowRightOnRectangleIcon className="h-6 w-6 text-gray-500" />
                 </ListItemIcon>
-                <ListItemText>Logout</ListItemText>
+                <Link  href={'/login'}> 
+                  <ListItemText >Logout</ListItemText>
+                </Link>
 
               </MenuItem>
-            
+
             </MenuList>
           </Paper>
 

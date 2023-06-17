@@ -12,11 +12,11 @@ export default function Login() {
                                 <p className="text-gray-800  text-center text-lg font-bold">Login</p>
                                 <div className="">
                                     <label className="block text-sm text-gray-00" >Username</label>
-                                    <input className="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded"  name="username" type="text"  placeholder="User Name"  />
+                                    <input className="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" name="username" type="text" placeholder="User Name" />
                                 </div>
                                 <div className="mt-2">
                                     <label className="block text-sm text-gray-600" >Password</label>
-                                    <input className="w-full px-5  py-1 text-gray-700 bg-gray-200 rounded" name="password" type="text"  placeholder="*******"  />
+                                    <input className="w-full px-5  py-1 text-gray-700 bg-gray-200 rounded" name="password" type="text" placeholder="*******" />
                                 </div>
                                 <div className="mt-4 items-center justify-between">
                                     <button className="px-4 py-1 text-white font-light tracking-wider bg-orange-500 rounded" type="submit">Login</button>

@@ -1,11 +1,11 @@
-import React from "react";
 import {
-  CalendarIcon,
-  FolderIcon,
   HomeIcon,
+  ListBulletIcon,
   RectangleGroupIcon,
-  UserGroupIcon,
+  Square3Stack3DIcon,
+  UserGroupIcon
 } from "@heroicons/react/24/outline";
+import React from "react";
 // define a NavItem prop
 export type NavItem = {
   label: string;
@@ -24,13 +24,19 @@ export const defaultNavItems: NavItem[] = [
     icon: <RectangleGroupIcon className="w-6 h-6" />,
   },
   {
-    label: "Projects",
-    href: "/projects",
-    icon: <FolderIcon className="w-6 h-6" />,
+    label: "Admin Customers List",
+    href: "/customers_list",
+    icon: <UserGroupIcon className="w-6 h-6" />,
   },
   {
-    label: "Calendar",
-    href: "/calendar",
-    icon: <CalendarIcon className="w-6 h-6" />,
+    label: "Admin Order List",
+    href: "/order_list",
+    icon: <ListBulletIcon className="w-6 h-6" />,
   },
+  {
+    label: "Admin Product List",
+    href: "/product_list",
+    icon: <Square3Stack3DIcon className="w-6 h-6" />,
+  },
+  
 ];

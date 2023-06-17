@@ -16,6 +16,6 @@
     "incremental": true,
     "baseUrl": "."
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/layout/dashboard/BarChart.jsx", "components/layout/dashboard/LineChart.jsx"],
   "exclude": ["node_modules"]
 }

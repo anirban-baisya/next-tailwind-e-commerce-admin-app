@@ -45,7 +45,6 @@ function BarChart() {
   useEffect(() => {
     if (chartContainer && chartContainer.current) {
       const chartInstance = new Chart(chartContainer.current, chartConfig);
-      //chartInstance.canvas.parentNode.style.height = "340px";
       setChart(chartInstance);
     }
     return () => {
